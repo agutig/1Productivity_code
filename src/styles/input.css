@@ -1,0 +1,32 @@
+
+.inputBoxI{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 1vh;
+    margin-left: 7vw;
+    border: 3px rgb(51, 51, 51) solid;
+    border-radius: 8px;
+}
+
+.inputBoxText{
+    background-color: #f7f7f700;
+    font-size: 1vw;
+    font-weight: 600;
+    width: 21vw;
+    border: none;
+    color: #e1e1e15e;
+}
+
+.inputBoxButton{
+    font-size: 1.5vw;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 8px;
+    width: 2vw;
+    border: 1px solid #272727;
+    color: #e1e1e1;
+    background-color: #3b3b3b;
+
+
+}

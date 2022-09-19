@@ -1,0 +1,52 @@
+
+.noteContainer{
+    border: 3px rgb(51, 51, 51) solid;
+    border-radius: 8px;
+    max-height: 15vh;
+    margin-top: 1vh;
+    word-wrap: break-word;
+    display: flex;
+    width: 25vw;
+    margin: auto;
+    margin-top: 1vh;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.noteInput{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    font-size: 2vh;
+    max-height: 12vh;
+    min-height: fit-content;
+    height: max-content;
+    width: 24vw;
+    word-wrap: break-word;
+    text-align: left;
+    resize: vertical;
+    background-color: rgba(240, 248, 255, 0);
+    color: #e1e1e1;
+
+}
+
+.noteButton{
+    
+    width: 5vh;
+    height: 5vh;
+    font-size: 3vh;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #272727;
+    color: #e1e1e1;
+    background-color: #3b3b3b;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}

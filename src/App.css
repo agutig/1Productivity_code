@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #222222;
+}
+
+.tittle{
+  margin: auto;
+  margin-top: 1vh;
+  font-size: 4vh;
+  width: fit-content;
+  text-align: center;
+  color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+  border-radius: 8px;
+  background-color: #222222;
+
+}
+
+.subtittle{
+  margin-top: 0%;
+  font-size: 2vh;
+  color: #f7f7f7;
+}
+
+
+.mainBox{
+  display: flex;
+  flex-direction: row;
+}
+
+.subBox1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 27.5vw;
+  margin: auto;
+  margin-top: 0%;
+}
+
+.subBox2{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 40vw;
+  margin: auto;
+  margin-top: 0%;
+}
+
+.subBox3{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 27.5vw;
+  margin: auto;
+  margin-top: 0%;
+}
+
+.timeBox{
+  height: 90vh;
+}
+
+.taskListBox{
+  margin: auto;
+  height: 80vh;
+}
+
+
+

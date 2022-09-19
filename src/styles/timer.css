@@ -1,0 +1,104 @@
+.fullContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: 3px solid #272727;
+    border-radius: 8px;
+    height: max-content;
+    width: 23vw;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.inputTimeBox{
+    display: flex;
+    flex-direction: row;
+    width: 22vw;
+    margin: auto;
+}
+
+
+.timerContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #272727;
+    border-radius: 8px;
+    height: fit-content;
+    width: 22vw;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+        0 2px 2px rgba(0,0,0,0.20), 
+        0 4px 4px rgba(0,0,0,0.15), 
+        0 8px 8px rgba(0,0,0,0.10),
+        0 16px 16px rgba(0,0,0,0.05);
+}
+
+.clockText{
+    font-size: 5vh;
+    margin: auto;
+    color: #e1e1e1;
+}
+
+
+.buttonsBox{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+    
+}
+
+.buttonBoxButton{
+    width: 2.5vw;
+    margin-bottom: 1vh;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #272727;
+    background-color: #e1e1e100;
+    color: #e1e1e1;
+    margin: auto;
+    width: 5vw;
+    
+}
+
+.timeSelectorBox{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.inputTime{
+    width: 2.5vw;
+    
+    margin-bottom: 1vh;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #272727;
+    background-color: #e1e1e100;
+    color: #e1e1e1;
+    width: 5vw;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.timeSelectorText{
+    margin-top: 1vh;
+    color: #e1e1e1;
+}
+
+.br{
+    font-size: 8vh;
+}

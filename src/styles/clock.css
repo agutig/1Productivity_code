@@ -1,0 +1,89 @@
+.clockContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border: 3px solid #272727;
+    border-radius: 8px;
+    height: 12vh;
+    width: 23vw;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.ubText{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-right: -1vw;
+    font-weight: 800;
+    font-size: 2vh;
+    letter-spacing: 0.5vh;
+    color: #e1e1e1;
+    
+}
+
+.clockBody{
+    border-right: 2px solid #272727;
+    
+}
+
+.clockConf{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    width: 10vw;
+}
+
+.confButton{
+    border-radius: 8px;
+    border: 1px solid #272727;
+    background-color: #e1e1e100;
+    color: #e1e1e1;
+    width: 5vw;
+    
+}
+
+.secDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 6vw;
+    margin: auto;
+    
+}
+
+.hourMin{
+    margin: auto;
+    margin-top: 0%;
+    font-size: 5vh;
+    width: 10vw;
+    color: #e1e1e1;
+}
+
+.seconds{
+    margin: auto;
+    margin-top: 0%;
+    font-size: 3vh;
+    color: #e1e1e1;
+}
+
+.secButton{
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #e1e1e1;
+    border: 1px  #3b3b3b solid;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
