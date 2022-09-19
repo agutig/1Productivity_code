@@ -5,6 +5,7 @@ import Chrono from './chrono';
 import {useState , useEffect} from 'react'
 import {v4 as uuidv4} from  'uuid'
 import '../styles/timeManager.css'
+import { DragDropContext , Droppable, Draggable} from '@hello-pangea/dnd';
 
 function TimeManager(props){
 
@@ -54,31 +55,85 @@ function TimeManager(props){
         }
     }
 
-    function createComponent(component){
+    function createComponent(component ,index){
         if (component.type === "clock"){
-                return (<Clock component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>)
+                return (
+                    <Draggable key={component.id}  draggableId={component.id} index={index}>
+                        {(draggableProvided) => (
+                        <div {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps}>
+                            <Clock component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>
+                        </div>
+                        )}
+                    </Draggable>
+                    )
             }else if(component.type === "timer"){
-                return <Timer component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>
+                return (
+                    <Draggable key={component.id}  draggableId={component.id} index={index}>
+                        {(draggableProvided) => (
+                        <div {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps}>
+                            <Timer component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>
+                        </div>
+                        )}
+                    </Draggable>
+                    )
+                
             }else{
-                return <Chrono component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>
+                return (
+                    <Draggable key={component.id}  draggableId={component.id} index={index}>
+                        {(draggableProvided) => (
+                        <div {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps}>
+                           <Chrono component={component}  list={timeManagerList} refresh={setTimeManagerList} key={component.id}/>
+                        </div>
+                        )}
+                    </Draggable>
+                    )
+                return 
             }
         
     }
 
+    const reorder = (list, startIndex ,endIndex) => {
+        const result = [...list];
+        const [removed] = result.splice(startIndex,1);
+        result.splice(endIndex,0,removed)
+        return result;
+    }
+
+
     return(
         <div className='timeManager'>
-            <div className='timeManagerTittle'>
-                <p className='timeManagerTittleText' >Time</p>
-                <button className='timeManagerTittleButton' onClick={() => newComponent("clock")}>🕒</button>
-                <p>_</p>
-                <button className='timeManagerTittleButton' onClick={() => newComponent("timer")}>⌛</button>
-                <p>_</p>
-                <button className='timeManagerTittleButton' onClick={() => newComponent("chrono")}>⏱️</button>
-            </div>
-            <div className='timeList'>
-                {timeManagerList.map( (componente)  => createComponent(componente) )  }
-            </div>
-            <p className='br'><br></br></p>
+            <DragDropContext onDragEnd={(result) => 
+                {
+                    const {source , destination} = result;
+                    if(!destination){
+                        return ;
+                    }
+                    if(
+                        source.index === destination.index && source.droppableId === destination.droppableId
+                    ){
+                        return ;
+                    }
+                    setTimeManagerList( prevTask => reorder(prevTask ,source.index,destination.index))
+                }
+            }>
+                <div className='timeManagerTittle'>
+                    <p className='timeManagerTittleText' >Time</p>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("clock")}>🕒</button>
+                    <p>_</p>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("timer")}>⌛</button>
+                    <p>_</p>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("chrono")}>⏱️</button>
+                </div>
+                <Droppable droppableId='timeManager'>
+                    {(droppableProvided) => (
+                    <div className='timeList' {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
+                        {timeManagerList.map( (componente ,index)  => createComponent(componente ,index) )  }
+                        {droppableProvided.placeholder}
+                    </div>
+                    )}
+                </Droppable>
+                <p className='br'><br></br></p>
+            </DragDropContext>
         </div>
     );
 
