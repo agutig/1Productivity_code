@@ -12,7 +12,6 @@ function TaskManager(props){
 
         setName(ev.target.value)
         const refreshedName = props.db.map(TM => {
-            console.log(props.db)
             if(props.list.id === TM.id ) {
                 TM.name = name;
             }

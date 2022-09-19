@@ -103,7 +103,6 @@ function Clock(props){
     }
 
     function closeClock(){
-        console.log(props)
         let refreshedList = props.list.filter( listClock => listClock.id !== props.component.id)
         props.refresh( refreshedList)
         

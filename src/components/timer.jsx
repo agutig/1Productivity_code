@@ -23,11 +23,7 @@ function Timer(props){
     useEffect(() => {
  
         let magic = Math.trunc((deadline) - (date)) 
-        console.log(magic)
-        console.log(stopCount)
-
         if(magic >= 0 && !stopCount){
-            console.log("pene")
             let interval = setInterval(() => { setCount(magic) },1000)
             secondsToFormat()
             setDate(Math.trunc(new Date().getTime() /1000))
