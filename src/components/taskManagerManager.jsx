@@ -3,7 +3,7 @@ import TaskManager from './taskManager';
 import {useState ,useEffect} from 'react'
 import {v4 as uuidv4} from  'uuid'
 import '../styles/taskManagerManager.css'
-import { DragDropContext , Droppable, Draggable} from 'react-beautiful-dnd';
+import { DragDropContext , Droppable, Draggable} from '@hello-pangea/dnd';;
 
 function TaskManagerManager(props){
 

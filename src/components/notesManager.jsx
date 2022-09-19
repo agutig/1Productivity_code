@@ -2,7 +2,7 @@ import {useState ,useEffect} from 'react'
 import Note from './note';
 import {v4 as uuidv4} from  'uuid'
 import '../styles/notesManager.css'
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext } from '@hello-pangea/dnd';
 
 
 function NotesManager(props){
