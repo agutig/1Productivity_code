@@ -72,7 +72,6 @@ function TaskManagerManager(props){
                                 </Draggable>
                             ))  
                             }
-                            <p className='br'><br></br></p>
                             {droppableProvided.placeholder}
                         </div>
                     )

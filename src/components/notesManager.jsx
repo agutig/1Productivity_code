@@ -77,7 +77,6 @@ function NotesManager(props){
                 )
                 }
             </Droppable>
-            <p className='br'><br></br></p>
             </DragDropContext>
         </div>
     );

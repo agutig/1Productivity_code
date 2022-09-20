@@ -44,7 +44,7 @@
 }
 
 .clockText{
-    font-size: 5vh;
+    font-size: 3vw;
     margin: auto;
     color: #e1e1e1;
 }
@@ -68,6 +68,7 @@
     color: #e1e1e1;
     margin: auto;
     margin-bottom: 0.5vh;
+    font-size: 1vw;
     width: 5vw;
     box-shadow: 0 0px 0px rgba(0,0,0,0.05),
                 0 1px 1px rgba(0,0,0,0.25), 
@@ -99,9 +100,7 @@
 .timeSelectorBox{
     display: flex;
     flex-direction: column;
-    margin: auto;
-    
-    
+    margin: auto; 
 }
 
 .inputTime{
@@ -126,6 +125,7 @@
 .timeSelectorText{
     margin-top: 1vh;
     color: #e1e1e1;
+    font-size: 1vw;
 }
 
 .br{

@@ -132,7 +132,6 @@ function TimeManager(props){
                     </div>
                     )}
                 </Droppable>
-                <p className='br'><br></br></p>
             </DragDropContext>
         </div>
     );

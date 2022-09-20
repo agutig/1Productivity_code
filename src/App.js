@@ -72,7 +72,7 @@ function App() {
       
       <footer>
           <PersistencyBox save={save} refresh={getSave}/>
-          <p className='versionText'>V: 1.0.0 | 2022 | Not avaible for mobile</p>
+          <p className='versionText'>V: 1.0.0 | 2022 | ▯ ↷ ▭ for mobile</p>
       </footer>
       
     </div>
