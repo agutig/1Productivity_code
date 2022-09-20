@@ -4,12 +4,15 @@
     width: 40vw;
     margin: auto;
     margin-top: 0%;
+    max-height: 75vh;
+    overflow: auto;
     background-color: #3b3b3b;
     box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
               0 2px 2px rgba(0,0,0,0.20), 
               0 4px 4px rgba(0,0,0,0.15), 
               0 8px 8px rgba(0,0,0,0.10),
               0 16px 16px rgba(0,0,0,0.05);
+    transition:  min-height 0.75s ,height 0.75s ,max-height 0.75;
   }
 
   .TMMTitle{
@@ -46,8 +49,44 @@
               0 4px 4px rgba(0,0,0,0.15), 
               0 8px 8px rgba(0,0,0,0.10),
               0 16px 16px rgba(0,0,0,0.05);
+    transition: background-color 0.5s , box-shadow 0.5s;
   }
+
+  .TMMTitleButton:hover{
+    background-color: #444444;
+    box-shadow: 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05),
+              0 20px 20px rgba(0,0,0,0.25);
+}
+
+.TMMTitleButton:active{
+    background-color: #3b3b3b;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.10);         
+}
 
 .br{
     font-size: 0.25vh;
+}
+
+.taskManagerManager::-webkit-scrollbar {
+  width: 0.75vw;               /* width of the entire scrollbar */
+}
+
+.taskManagerManager::-webkit-scrollbar-track {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px ;
+  background: #3b3b3b;        /* color of the tracking area */
+}
+
+.taskManagerManager::-webkit-scrollbar-thumb {
+  background-color: #272727;    /* color of the scroll thumb */    /* roundness of the scroll thumb */
+  border: 3px solid #3b3b3b;  /* creates padding around scroll thumb */
+  border-radius: 8px;
 }

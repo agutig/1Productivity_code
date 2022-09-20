@@ -34,9 +34,30 @@
     color: #e1e1e1;
     border: 1px solid #272727;
     height: 5vh;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.10);
+    transition: background-color 0.5s , box-shadow 0.5s;
+}
+
+
+.chronoButton:hover{
+    background-color: #444444;
+    box-shadow: 
+              0 1px 1px rgba(0,0,0,0.25),
               0 2px 2px rgba(0,0,0,0.20), 
               0 4px 4px rgba(0,0,0,0.15), 
               0 8px 8px rgba(0,0,0,0.10),
               0 16px 16px rgba(0,0,0,0.05);
+}
+
+.chronoButton:active{
+    background-color: #3b3b3b;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.10),
+                0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15);           
 }

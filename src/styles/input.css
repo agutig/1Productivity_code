@@ -4,7 +4,7 @@
     flex-direction: row;
     margin: auto;
     margin-top: 1vh;
-    margin-left: 7vw;
+    margin-left: 7.5vw;
     border: 3px rgb(51, 51, 51) solid;
     border-radius: 8px;
 }
@@ -27,6 +27,29 @@
     border: 1px solid #272727;
     color: #e1e1e1;
     background-color: #3b3b3b;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.10),
+                0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15);  
+    transition: background-color 0.5s , box-shadow 0.5s , min-height 0.5s ,height 0.75s ;
+}
 
+.inputBoxButton:hover{
+    background-color: #444444;
+    box-shadow: 
+              0 1px 1px rgba(0,0,0,0.25),
+              0 1px 1px rgba(0,0,0,0.20), 
+              0 2px 2px rgba(0,0,0,0.15), 
+              0 4px 4px rgba(0,0,0,0.10),
+              0 8px 8px rgba(0,0,0,0.05);
+}
 
+.inputBoxButton:active{
+    background-color: #3b3b3b;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.10),
+                0 0px 0px rgba(0,0,0,0.05),
+                0 0px 0px rgba(0,0,0,0.25), 
+                0 0px 0px rgba(0,0,0,0.20), 
+                0 0px 0px rgba(0,0,0,0.15);           
 }

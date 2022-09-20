@@ -4,7 +4,24 @@
   flex-wrap: wrap;
   text-align: center;
   background-color: #222222;
+  
 }
+
+
+body::-webkit-scrollbar {
+  width: 0.75vw;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #3b3b3b;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #272727;    /* color of the scroll thumb */    /* roundness of the scroll thumb */
+  border: 3px solid #3b3b3b;  /* creates padding around scroll thumb */
+  border-radius: 8px;
+}
+
 
 .tittle{
   margin: auto;
@@ -13,14 +30,21 @@
   width: fit-content;
   text-align: center;
   color: #f7f7f7;
-  border: 2px solid #f7f7f7;
+  border: none;
   border-radius: 8px;
-  background-color: #222222;
+  background-color: #3b3b3b;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+  transition:  min-height 0.75s ,height 0.75s ,max-height 0.75;
 
 }
 
 .subtittle{
   margin-top: 0%;
+  margin-left: 15vw;
   font-size: 2vh;
   color: #f7f7f7;
 }
@@ -67,5 +91,8 @@
   height: 80vh;
 }
 
+.versionText{
+  color: #bbbbbb;
+}
 
 

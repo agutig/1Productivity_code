@@ -22,6 +22,7 @@
     flex-direction: row;
     width: 22vw;
     margin: auto;
+    
 }
 
 
@@ -66,14 +67,40 @@
     background-color: #e1e1e100;
     color: #e1e1e1;
     margin: auto;
+    margin-bottom: 0.5vh;
     width: 5vw;
-    
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.10);
+    transition: background-color 0.5s , box-shadow 0.5s , min-height 0.5s ,height 0.75s ;
+}
+
+.buttonBoxButton:hover{
+    background-color: #444444;
+    box-shadow: 
+              0 1px 1px rgba(0,0,0,0.25),
+              0 2px 2px rgba(0,0,0,0.20), 
+              0 4px 4px rgba(0,0,0,0.15), 
+              0 8px 8px rgba(0,0,0,0.10),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.buttonBoxButton:active{
+    background-color: #3b3b3b;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.10),
+                0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15);           
 }
 
 .timeSelectorBox{
     display: flex;
     flex-direction: column;
     margin: auto;
+    
     
 }
 
@@ -87,11 +114,13 @@
     background-color: #e1e1e100;
     color: #e1e1e1;
     width: 5vw;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
-              0 2px 2px rgba(0,0,0,0.20), 
-              0 4px 4px rgba(0,0,0,0.15), 
-              0 8px 8px rgba(0,0,0,0.10),
-              0 16px 16px rgba(0,0,0,0.05);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.05),
+                0 1px 1px rgba(0,0,0,0.25), 
+                0 2px 2px rgba(0,0,0,0.20), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.10);
+
+    margin-top: 0.77vh;
 }
 
 .timeSelectorText{

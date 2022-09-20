@@ -76,9 +76,9 @@ function Timer(props){
     function stopTimer(){
 
         if (stopCount){
-            return(<button className='buttonBoxButton' onClick={() => pauseTimer()}>Resume timer</button>);
+            return(<button className='buttonBoxButton' onClick={() => pauseTimer()}>▶</button>);
         }else{
-            return(<button className='buttonBoxButton' onClick={() => pauseTimer()}>Stop timer</button>);
+            return(<button className='buttonBoxButton' onClick={() => pauseTimer()}>| |</button>);
         }
     }
 

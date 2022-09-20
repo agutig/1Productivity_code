@@ -133,7 +133,6 @@ function Clock(props){
                     <button className='confButton' onClick={() => getUbication(4)}>BEIJING</button>
                 </span>
                 
-
             </div>
             
         </div>

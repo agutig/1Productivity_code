@@ -27,6 +27,7 @@ function App() {
         getNotes( JSON.parse(localStorage.getItem('notes')))
         getTMM(JSON.parse(localStorage.getItem('TMM')))
         getTimeManager(JSON.parse(localStorage.getItem('timeManager')))
+        getTittle(localStorage.getItem('tittle'))
       }
        
     }
@@ -34,12 +35,21 @@ function App() {
     
   },[])
 
+  function saveTittle(ev){
+    getTittle(ev.target.value)
+    if(save === "days"){
+      localStorage.setItem('tittle',ev.target.value);
+  }
+  }
 
 
   return (
     <div className="App">
-      <input type='text' value={tittle} onChange={ev => getTittle(ev.target.value)} className='tittle' />
-      <h3 className='subtittle'><em> &nbsp; &nbsp; &nbsp; by agutig.github</em></h3>
+
+      <div className='mainTittle'>
+        <input type='text' value={tittle} onChange={ev => saveTittle(ev)} className='tittle' />
+        <h3 className='subtittle'><em> &nbsp; &nbsp; &nbsp; by agutig.github</em></h3>
+      </div>
 
       <div className='mainBox'>
         <div className='subBox1'>
@@ -62,6 +72,7 @@ function App() {
       
       <footer>
           <PersistencyBox save={save} refresh={getSave}/>
+          <p className='versionText'>V: 1.0.0 | 2022 | Not avaible for mobile</p>
       </footer>
       
     </div>

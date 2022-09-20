@@ -39,7 +39,7 @@ function TaskManagerManager(props){
 
     return(
         <div className='taskManagerManager'>
-            <DragDropContext onDragEnd={(result) => 
+            <DragDropContext  onDragEnd={(result) => 
                 {
                     const {source , destination} = result;
                     if(!destination){
@@ -57,9 +57,10 @@ function TaskManagerManager(props){
                     <p className='TMMTitleText'>Lists</p>
                     <button className='TMMTitleButton' onClick={() => addTaskManager()}>+</button>
                 </div>
-                <Droppable droppableId='taskManager'>
+                
+                <Droppable droppableId='taskManager' >
                     { (droppableProvided) => (
-                        <div {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
+                        <div  {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
                             {taskManagerList.map( (taskManager ,index) => (
                                 <Draggable key={taskManager.id}  draggableId={taskManager.id} index={index}>
                                     {(draggableProvided) => (

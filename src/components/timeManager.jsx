@@ -119,9 +119,9 @@ function TimeManager(props){
                 <div className='timeManagerTittle'>
                     <p className='timeManagerTittleText' >Time</p>
                     <button className='timeManagerTittleButton' onClick={() => newComponent("clock")}>🕒</button>
-                    <p>_</p>
+                    <p className='componentSeparator'>_</p>
                     <button className='timeManagerTittleButton' onClick={() => newComponent("timer")}>⌛</button>
-                    <p>_</p>
+                    <p className='componentSeparator'>_</p>
                     <button className='timeManagerTittleButton' onClick={() => newComponent("chrono")}>⏱️</button>
                 </div>
                 <Droppable droppableId='timeManager'>
