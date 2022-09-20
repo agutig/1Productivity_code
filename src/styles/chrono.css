@@ -25,6 +25,8 @@
     font-size: 3vw;
     width: 10vw;
     color: #e1e1e1;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 .chronoButton{
@@ -36,6 +38,8 @@
     border: 1px solid #272727;
     width: 2vw;
     font-size: 1vw;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     box-shadow: 0 0px 0px rgba(0,0,0,0.05),
                 0 1px 1px rgba(0,0,0,0.25), 
                 0 2px 2px rgba(0,0,0,0.20), 

@@ -7,6 +7,10 @@ import {v4 as uuidv4} from  'uuid'
 import '../styles/timeManager.css'
 import { DragDropContext , Droppable, Draggable} from '@hello-pangea/dnd';
 
+import { BiTime} from "react-icons/bi";
+import { MdTimer} from "react-icons/md";
+import { MdAvTimer} from "react-icons/md";
+
 function TimeManager(props){
 
     const [timeManagerList ,setTimeManagerList] = useState(props.data);
@@ -87,7 +91,6 @@ function TimeManager(props){
                         )}
                     </Draggable>
                     )
-                return 
             }
         
     }
@@ -118,11 +121,11 @@ function TimeManager(props){
             }>
                 <div className='timeManagerTittle'>
                     <p className='timeManagerTittleText' >Time</p>
-                    <button className='timeManagerTittleButton' onClick={() => newComponent("clock")}>🕒</button>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("clock")}><BiTime/></button>
                     <p className='componentSeparator'>_</p>
-                    <button className='timeManagerTittleButton' onClick={() => newComponent("timer")}>⌛</button>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("timer")}><MdAvTimer/></button>
                     <p className='componentSeparator'>_</p>
-                    <button className='timeManagerTittleButton' onClick={() => newComponent("chrono")}>⏱️</button>
+                    <button className='timeManagerTittleButton' onClick={() => newComponent("chrono")}><MdTimer/></button>
                 </div>
                 <Droppable droppableId='timeManager'>
                     {(droppableProvided) => (

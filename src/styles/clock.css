@@ -25,6 +25,8 @@
     font-size: 2vh;
     letter-spacing: 0.5vh;
     color: #e1e1e1;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     
 }
 
@@ -52,6 +54,8 @@
     color: #e1e1e1;
     font-size: 0.80vw;
     width: 5vw;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     box-shadow: 0 0px 0px rgba(0,0,0,0.05),
                 0 1px 1px rgba(0,0,0,0.25), 
                 0 2px 2px rgba(0,0,0,0.20), 
@@ -97,6 +101,8 @@
     width: 10vw;
     font-size: 2.5vw;
     color: #e1e1e1;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 .seconds{
@@ -105,6 +111,8 @@
     font-size: 3vh;
     color: #e1e1e1;
     font-size: 1.75vw;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 .secButton{
@@ -117,6 +125,8 @@
     text-align: center;
     font-size: 1vw;
     border: 1px  #3b3b3b solid;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
               0 2px 2px rgba(0,0,0,0.20), 
               0 4px 4px rgba(0,0,0,0.15), 

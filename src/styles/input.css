@@ -16,6 +16,14 @@
     width: 21vw;
     border: none;
     color: #e1e1e15e;
+    background-color: #3b3b3b;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
+}
+
+.inputBoxText::placeholder{
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 .inputBoxButton{

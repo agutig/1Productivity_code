@@ -14,6 +14,8 @@
               0 8px 8px rgba(0,0,0,0.10),
               0 16px 16px rgba(0,0,0,0.05);
     transition:  min-height 0.75s ,height 0.75s ,max-height 0.75;
+    animation-name: bigComponentAnimation;
+    animation-duration: 2s;
   }
 
   .TMMTitle{
@@ -32,6 +34,8 @@
     width: 10vw;
     letter-spacing: 0.5vw;
     color: #f7f7f7;
+    animation-name: tittleAnimation;
+    animation-duration: 2s;
   }
 
   .TMMTitleButton{
@@ -51,6 +55,8 @@
               0 8px 8px rgba(0,0,0,0.10),
               0 16px 16px rgba(0,0,0,0.05);
     transition: background-color 0.5s , box-shadow 0.5s;
+    animation-name: bigComponentAnimation;
+    animation-duration: 3s;
   }
 
   .TMMTitleButton:hover{

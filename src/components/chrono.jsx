@@ -27,11 +27,11 @@ function Chrono(props){
 
         }
 
-    },[count , stopCount]);
+    },[count , stopCount ,date,pauseDelay]); //Added date & pause delay, if there is a bug try to delete them from the array
 
 
     function secondsToFormat(){
-        let milliseconds = parseInt((count % 1000) / 100)
+        
         let seconds = Math.floor((count / 1000) % 60)
         let minutes = Math.floor((count / (1000 * 60)) % 60)
         let hours = Math.floor((count / (1000 * 60 * 60)) % 24)

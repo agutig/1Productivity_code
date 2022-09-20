@@ -22,6 +22,8 @@
     flex-direction: row;
     width: 22vw;
     margin: auto;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     
 }
 
@@ -47,6 +49,8 @@
     font-size: 3vw;
     margin: auto;
     color: #e1e1e1;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 
@@ -70,6 +74,8 @@
     margin-bottom: 0.5vh;
     font-size: 1vw;
     width: 5vw;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
     box-shadow: 0 0px 0px rgba(0,0,0,0.05),
                 0 1px 1px rgba(0,0,0,0.25), 
                 0 2px 2px rgba(0,0,0,0.20), 
@@ -126,6 +132,8 @@
     margin-top: 1vh;
     color: #e1e1e1;
     font-size: 1vw;
+    animation-name: smallComponentsText;
+    animation-duration: 2s;
 }
 
 .br{

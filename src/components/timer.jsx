@@ -28,7 +28,7 @@ function Timer(props){
             secondsToFormat()
             setDate(Math.trunc(new Date().getTime() /1000))
 
-            if (magic === 1){
+            if (magic === 0){
                 let not = new Audio(sound);
                 not.pause();
                 not.currentTime = 0;   
