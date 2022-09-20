@@ -28,15 +28,18 @@ function Timer(props){
             secondsToFormat()
             setDate(Math.trunc(new Date().getTime() /1000))
 
-            if (magic === 0){
-                let not = new Audio(sound);
-                not.pause();
-                not.currentTime = 0;   
-                not.play();
-            }
+            let interval2 = setInterval(() => { 
+                if (magic === 0){
+                    let not = new Audio(sound);
+                    not.pause();
+                    not.currentTime = 0;   
+                    not.play();
+                }
+            },1000)
             
             return(() => {
                 clearInterval(interval)
+                clearInterval(interval2)
             })
 
         }
