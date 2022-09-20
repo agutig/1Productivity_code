@@ -24,22 +24,21 @@ function Timer(props){
  
         let magic = Math.trunc((deadline) - (date)) 
         if(magic >= 0 && !stopCount){
-            let interval = setInterval(() => { setCount(magic) },1000)
-            secondsToFormat()
-            setDate(Math.trunc(new Date().getTime() /1000))
-
-            let interval2 = setInterval(() => { 
+            let interval = setInterval(() => { 
+                setCount(magic) ;
                 if (magic === 0){
                     let not = new Audio(sound);
                     not.pause();
                     not.currentTime = 0;   
                     not.play();
                 }
-            },1000)
             
+            },1000)
+            secondsToFormat()
+            setDate(Math.trunc(new Date().getTime() /1000))
+
             return(() => {
                 clearInterval(interval)
-                clearInterval(interval2)
             })
 
         }
