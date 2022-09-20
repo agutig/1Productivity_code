@@ -49,3 +49,9 @@
 .br{
     font-size: 0.25vh;
 }
+
+
+
+.dropableTask{
+    height: 5vh;
+}

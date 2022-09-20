@@ -2,7 +2,7 @@ import {useState ,useEffect} from 'react'
 import Note from './note';
 import {v4 as uuidv4} from  'uuid'
 import '../styles/notesManager.css'
-import { DragDropContext } from '@hello-pangea/dnd';
+import { DragDropContext , Droppable, Draggable} from '@hello-pangea/dnd';
 
 
 function NotesManager(props){
@@ -31,15 +31,54 @@ function NotesManager(props){
         }
     },[notesList , props.save])
 
+    const reorder = (list, startIndex ,endIndex) => {
+        const result = [...list];
+        const [removed] = result.splice(startIndex,1);
+        result.splice(endIndex,0,removed)
+        return result;
+    }
+
 
     return(
         <div className='notesManager'>
+            <DragDropContext onDragEnd={(result) => 
+                {
+                    const {source , destination} = result;
+                    if(!destination){
+                        return ;
+                    }
+                    if(
+                        source.index === destination.index && source.droppableId === destination.droppableId
+                    ){
+                        return ;
+                    }
+                    setNotesList( prevTask => reorder(prevTask ,source.index,destination.index))
+                }
+            }>
             <div className='notesManagerTittle'>
                 <p className='notesManagerText' >Notes</p>
                 <button className='notesManagerButton' onClick={() => addNote()} > +</button>
             </div>
-            {notesList.map((note) => <Note list={notesList} refresh={setNotesList} text={note.text} id={note.id} key={note.id} save={props.save}/>)}
+            <Droppable droppableId='notesManager'>
+                {(droppableProvided) => (
+                    <div {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
+                        {notesList.map((note ,index) => 
+                            <Draggable key={note.id}  draggableId={note.id} index={index}>
+                                {(draggableProvided) => (
+                                    <div  {...draggableProvided.draggableProps} ref={draggableProvided.innerRef} {...draggableProvided.dragHandleProps}>
+                                        <Note list={notesList} refresh={setNotesList} text={note.text} id={note.id} key={note.id} save={props.save}/>
+                                    </div>
+                                )}
+                            </Draggable>
+                            
+                        )}
+                        {droppableProvided.placeholder}
+                    </div>
+                )
+                }
+            </Droppable>
             <p className='br'><br></br></p>
+            </DragDropContext>
         </div>
     );
 

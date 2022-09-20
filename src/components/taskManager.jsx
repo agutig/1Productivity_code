@@ -59,7 +59,7 @@ function TaskManager(props){
                     <button onClick={() => deleteTaskList()} className='taskCloseButton'>X</button>
                 </div>
                 <Input db={props.db} refresh={props.refresh} id_TM={props.list.id}/>
-                <Droppable droppableId='task'>
+                <Droppable droppableId='task' className='dropableTask'>
                     {(droppableProvided) => (
                         <div {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
                             {props.list.data.map( (task ,index) =>
