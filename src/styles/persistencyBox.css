@@ -15,12 +15,12 @@
 .persistencyBoxText{
     margin: auto;
     margin-top: -1vh;
-    font-size: 3vh;
+    font-size: 1.5vw;
     color: #f7f7f7;
 }
 
 .persistencyBoxButton{
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-weight: 700;
     text-align: center;
     border: 1px solid #272727;

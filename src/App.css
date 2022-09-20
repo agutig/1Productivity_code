@@ -92,6 +92,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .versionText{
+  font-size: 1.35vw;
   margin-top: 0.2vh;
   color: #bbbbbb;
 }

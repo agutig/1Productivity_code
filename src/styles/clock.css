@@ -29,7 +29,10 @@
 }
 
 .clockBody{
+    margin-top: auto;
+    margin-bottom: auto;
     border-right: 2px solid #272727;
+    width: 10vw;
     
 }
 
